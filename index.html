@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delesign</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primaryBlue: '#00aef0',
+                        accentGold: '#f4aa0b',
+                        designers: '#f7f7f7'
+                    },
+                    backgroundImage: {
+                        landingBg1: "url('./img/landing_bg1.png')",
+                        designersBg: "url('./img/designers_create_bg1.png')",
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+
+        main {
+            background-image: url(./img/landing_bg2.png), url(./img/landing_bg1.png);
+            background-position: center bottom, center bottom 25px;
+            background-size: contain;
+        }
+
+        section#designers_create {
+            background-image: url(./img/designers_create_bg1.png);
+            background-position: center bottom;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        section#designers_schedule {
+            background-image: url(./img/designers_schedule_bg1.png);
+            background-position: center bottom;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        
+        section#designers_schedule #schedule_day {
+            background-image: url(./img/schedule_day.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        section#designers_schedule #schedule_night {
+            background-image: url(./img/schedule_night.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        section#see_how_it_works {
+            background-image: url(./img/see_bg1.png);
+            background-position: center bottom;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        #testimonial_octopus {
+            clip-path: polygon(0% 0%, 100% 0%, 100% 55.25%, 0% 55.25%);
+        }
+
+
+
+        @layer utilities {
+              .content-auto {
+                content-visibility: auto;
+              }
+            }
+    </style>
+
+
+</head>
+
+<body>
+    <header class="w-full h-[101px] bg-primaryBlue flex items-center justify-between text-white px-[250px]">
+        <div>
+            <img src="./img/logo.png" alt="">
+        </div>
+        <nav class="flex gap-5">
+            <a href="">Pricing</a>
+            <a href="">How it works</a>
+            <a href="">Design Samples</a>
+            <a href="">About</a>
+        </nav>
+        <div class="justify-self-end flex gap-x-5">
+            <button>Sign in</button>
+            <button class="border border-white rounded-md px-7 py-1">Start Today</button>
+        </div>
+    </header>
+
+    <main class="w-full h-auto py-[70px] bg-primaryBlue bg-no-repeat text-white">
+        <div class="flex justify-between w-[80%] xl:w-[60%] mx-auto">
+            <div class="w-[50%]">
+                <h1 class="text-3xl">Unlimited Custom Print, Web, <br> and Video Graphic Design</h1>
+                <p class="mt-5">Receive unlimited design requests and revisions from your own dedicated professional
+                    graphic designer for a flat rate of $350 per month.</p>
+
+                <div class="inline-flex flex flex-col mt-5">
+                    <div class=" bg-accentGold rounded-md py-2 px-6 flex flex-col items-center">
+                        <p class="text-3xl">$350 / MONTH</p>
+                        <p class="text-sm"> START TODAY</p>
+                    </div>
+                    <i class="underline text-end text-sm pr-5">Limited time offer</i>
+                </div>
+            </div>
+            <div class="w-[40%]"><img src="./img/octopus.png" alt=""></div>
+        </div>
+    </main>
+
+    <section id="designers_create" class="bg-designers h-full py-[100px]">
+        <div class="flex w-[60%] mx-auto">
+            <div class="w-[50%]">
+                <h2 class="text-primaryBlue font-bold text-2xl">OUR GRAPHIC DESIGNERS CREATE...</h2>
+                <p class="mt-5">Anything you can describe, we can create. <br>
+                    From website and app wireframes to flyers and handouts <br> and everything in between, we've got you
+                    covered.</p>
+                <button class="mt-10 text-accentGold border-accentGold border rounded-md px-3 py-1">View our real
+                    client's
+                    work</button>
+            </div>
+            <div id="logos" class="w-[50%] flex flex-col gap-10 items-center text-xs">
+                <div id="top_logos" class="flex gap-10">
+                    <div class="flex flex-col items-center mt-8 gap-1">
+                        <div
+                            class="bg-white rounded-full aspect-square flex items-center justify-center p-2 border-2 w-[70px]">
+                            <img src="./img/logos/logo_design.png" alt="">
+                        </div>
+                        <p class="text-center">Logo <br>Design</p>
+                    </div>
+                    <div class="flex flex-col items-center mt-6 gap-1">
+                        <div
+                            class="bg-white rounded-full aspect-square flex items-center justify-center p-2 border-2 w-[70px]">
+                            <img src="./img/logos/video_edit.png" alt="">
+                        </div>
+                        <p class="text-center">Video <br>Editing</p>
+                    </div>
+                    <div class="flex flex-col items-center mt-4 gap-1">
+                        <div
+                            class="bg-white rounded-full aspect-square flex items-center justify-center p-2 border-2 w-[70px]">
+                            <img src="./img/logos/infographics.png" alt="">
+                        </div>
+                        <p class="text-center">Infographics</p>
+                    </div>
+                    <div class="flex flex-col items-center mt-2 gap-1">
+                        <div
+                            class="bg-white rounded-full aspect-square flex items-center justify-center p-2 border-2 w-[70px]">
+                            <img src="./img/logos/flyers.png" alt="">
+                        </div>
+                        <p class="text-center">Flyers, <br>Brochures & <br> Business Cards</p>
+                    </div>
+                    <div class="flex flex-col items-center gap-1">
+                        <div
+                            class="bg-white rounded-full aspect-square flex items-center justify-center p-2 border-2 w-[70px]">
+                            <img width="30" src="./img/logos/more.png" alt="">
+                        </div>
+                        <p class="text-center">and so much <br>more!</p>
+                    </div>
+                </div>
+                <div id="bottom_logos" class="flex gap-10">
+                    <div class="flex flex-col items-center mt-6 gap-1">
+                        <div
+                            class="bg-white rounded-full aspect-square flex items-center justify-center p-2 border-2 w-[70px]">
+                            <img src="./img/logos/illustrations.png" alt="">
+                        </div>
+                        <p class="text-center">Illustrations</p>
+                    </div>
+                    <div class="flex flex-col items-center mt-4 gap-1">
+                        <div
+                            class="bg-white rounded-full aspect-square flex items-center justify-center p-2 border-2 w-[70px]">
+                            <div class="flex items-center justify-center">
+                                <div> <img src="./img/logos/soc3.png" alt="">
+                                    <img src="./img/logos/soc2.png" alt="">
+                                </div>
+                                <div>
+                                    <img src="./img/logos/soc1.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-center">Social Media<br>posts</p>
+                    </div>
+                    <div class="flex flex-col items-center mt-2 gap-1">
+                        <div
+                            class="bg-white rounded-full aspect-square flex items-center justify-center p-2 border-2 w-[70px]">
+                            <img src="./img/logos/web_mobile.png" alt="">
+                        </div>
+                        <p class="text-center">Web<br>& Mobile <br> Design</p>
+                    </div>
+                    <div class="flex flex-col items-center gap-1">
+                        <div
+                            class="bg-white rounded-full aspect-square flex items-center justify-center p-2 border-2 w-[70px]">
+                            <img src="./img/logos/photo_editing.png" alt="">
+                        </div>
+                        <p class="text-center">Photo <br>Editing</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="designers_schedule" class=" bg-white py-[100px]">
+
+        <div class="w-[40%] mx-auto text-center flex flex-col gap-5">
+            <h2 class="text-primaryBlue font-bold text-2xl">SELECT YOUR DESIGNER'S SCHEDULE</h2>
+            <p>Only with Delesign can you select when your designer will be available at no added cost.</p>
+
+            <div id="schedules" class="flex text-white mx-auto">
+                <div id="schedule_day" class="w-[342px] h-[269px] flex items-center justify-center">
+                    <div class="flex flex-col">
+                        <h2 class="font-semibold text-2xl">DAY SCHEDULE</h2>
+                        <p>6:00 AM - 4:00 PM Pacific Time</p>
+                    </div>
+                </div>
+                <div id="schedule_night" class="w-[342px] h-[269px] flex items-center justify-center">
+                    <div class="flex flex-col">
+                        <h2 class="font-semibold text-2xl">NIGHT SCHEDULE</h2>
+                        <p>6:00 PM - 4:00 PM Pacific Time</p>
+                    </div>
+                </div>
+            </div>
+
+            <button class="inline-flex mx-auto border border-accentGold text-accentGold px-10 py-1 rounded-md">Learn
+                More</button>
+        </div>
+
+        <div class="w-[80%] mx-auto text-center my-20">
+            <h2 class="text-2xl">We're Proud Of Our Service</h2>
+            <div class="flex items-center justify-center gap-20 text-sm mt-10">
+                <div class="flex flex-col items-center gap-3">
+                    <img class="h-[60px] object-contain" src="./img/logos/schedule/hq.png" alt="">
+                    <p>High Quality <br> Designs</p>
+                </div>
+                <div class="flex flex-col items-center gap-3">
+                    <img class="h-[60px] object-contain" src="./img/logos/schedule/dedicated.png" alt="">
+                    <p>Dedicated <br> Designer</p>
+                </div>
+                <div class="flex flex-col items-center gap-3">
+                    <img class="h-[60px] object-contain" src="./img/logos/schedule/unlimited.png" alt="">
+                    <p>Unlimited <br> Design Requests</p>
+                </div>
+                <div class="flex flex-col items-center gap-3">
+                    <img class="h-[60px] object-contain" src="./img/logos/schedule/cs.png" alt="">
+                    <p>24/7 Client <br> Support</p>
+                </div>
+                <div class="flex flex-col items-center gap-3">
+                    <img class="h-[60px] object-contain" src="./img/logos/schedule/unli.png" alt="">
+                    <p>Unlimited <br> Revisions</p>
+                </div>
+                <div class="flex flex-col items-center gap-3">
+                    <img class="h-[60px] object-contain" src="./img/logos/schedule/turnaround.png" alt="">
+                    <p>12 tp 24 Hours <br> Turnaround Time</p>
+                </div>
+                <div class="flex flex-col items-center gap-3">
+                    <img class="h-[60px] object-contain" src="./img/logos/schedule/access.png" alt="">
+                    <p>Access <br> To Source Files</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="see_how_it_works" class="bg-designers h-full pb-[120px]">
+        <div class="flex w-[55%] mx-auto">
+            <div class="w-[50%] pt-10">
+                <h2 class="text-primaryBlue font-bold text-2xl">SEE HOW IT WORKS</h2>
+                <p class="mt-5">
+                    Unlimited professional graphic design help at a low <br> monthly flat rate. We're always available
+                    to help!
+                </p>
+                <button class="mt-10 text-accentGold border-accentGold border rounded-md px-3 py-1">Watch the live
+                    demo</button>
+            </div>
+            <div id="logos" class="w-[50%] flex flex-col gap-10 items-center text-xs">
+                <img src="./img/see_media1.png" alt="">
+            </div>
+        </div>
+    </section>
+
+
+    <section id="testimonials" class="bg-white pt-[100px]">
+
+        <div class="w-[60%] mx-auto text-center flex justify-between">
+            <div class="flex flex-col py-5 px-6 border rounded-lg w-[294px] h-[455px]">
+                <img class="mx-auto" src="./img/testimonial_1.png" alt="">
+                <p class="grow mt-12 text-sm leading-6"> “Is that why you slapped my brother around in public? Fredo,
+                    you're my older brother, and I love you. But don't ever take sides with anyone against the Family
+                    again. Ever. You can act like a man! You talk about vengeance.”</p>
+                <div class="text-sm">
+                    <h2 class="font-bold">Derrick Rose</h2>
+                    <h3>Minnesota Timberwolves</h3>
+                </div>
+            </div>
+            <div class="flex flex-col py-5 px-6 border rounded-lg w-[294px] h-[455px]">
+                <img class="mx-auto" src="./img/testimonial_2.png" alt="">
+                <p class="grow mt-12 text-sm leading-6"> “Don't you know that I would use all of my power to prevent
+                    something like that from happening? The hotel, the casino. The Corleone Family wants to buy you out.
+                    That's my family Kay, that's not me.”</p>
+                <div class="text-sm">
+                    <h2 class="font-bold">Gregg Popovich</h2>
+                    <h3>San Antonio Spurs</h3>
+                </div>
+            </div>
+            <div class="flex flex-col py-5 px-6 border rounded-lg w-[294px] h-[455px]">
+                <img class="mx-auto" src="./img/testimonial_3.png" alt="">
+                <p class="grow mt-12 text-sm leading-6"> “Never let anyone know what you are thinking. We're both part
+                    of the same hypocrisy, senator, but never think it applies to my family.”</p>
+                <div class="text-sm">
+                    <h2 class="font-bold">Kyrie Irving</h2>
+                    <h3>Boston Celtics</h3>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="text-center py-[100px] h-[600px]">
+            <h2 class="font-semibold text-primaryBlue text-2xl">OUR GUARANTEE</h2>
+            <p class="mt-5">Try Delesign completely risk free. Use our service for 15 days, and if we're not a fit, you
+                will receive a <br> 100% full refund.</p>
+        </div>
+        <div class="relative w-full flex flex-col items-center">
+            <button class="absolute bottom-[250px] bg-accentGold text-white rounded-lg z-10 text-3xl px-8 py-2">START
+                TODAY</button>
+            <img class="absolute bottom-[-210px]" id="testimonial_octopus" src="./img/testimonial_octopus.png" alt="">
+            <div class="absolute left-0 bottom-0 right-0"> <img class="w-full" src="./img/testimonial_bg2.png" alt="">
+            </div>
+            <div class="absolute left-0 bottom-0 right-0"> <img class="w-full" src="./img/testimonial_bg1.png" alt="">
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <footer class="bg-primaryBlue z-10 flex py-[100px] text-white">
+        <div class="w-[70%] mx-auto">
+            <div class="flex w-full items-center gap-10">
+                <img class="" src="./img/logo.png" alt="">
+                <hr class="grow bg-red-500">
+            </div>
+
+            <div class="flex justify-between py-10">
+                <ul class="flex flex-col gap-2">
+                    <li>75 E Santa Clara St, <br>San Jose, CA 95113</li>
+                    <li>098-765-4321</li>
+                    <li>sales@delesign.com</li>
+                </ul>
+                <ul class="flex flex-col gap-2">
+                    <li>Pricing</li>
+                    <li>How it works</li>
+                    <li>Demo</li>
+                </ul>
+                <ul class="flex flex-col gap-2">
+                    <li>Testimonials</li>
+                    <li>About Us</li>
+                    <li>Design Samples</li>
+                </ul>
+                <ul class="flex gap-2">
+                    <li><img src="./img/logos/footer_socmed1.png" alt=""></li>
+                    <li><img src="./img/logos/footer_socmed2.png" alt=""></li>
+                    <li><img src="./img/logos/footer_socmed3.png" alt=""></li>
+                </ul>
+            </div>
+            <hr>
+            <p class="text-center mt-5">&copy; 2018 Delesign</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
