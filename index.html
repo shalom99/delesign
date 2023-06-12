@@ -65,10 +65,13 @@
             background-repeat: no-repeat;
         }
 
-        #testimonial_octopus {
-            clip-path: polygon(0% 0%, 100% 0%, 100% 55.25%, 0% 55.25%);
+        
+        section#testimonials {
+            background-image: url(./img/testimonial_bg.png);
+            background-position: center bottom;
+            background-size: contain;
+            background-repeat: no-repeat;
         }
-
 
 
         @layer utilities {
@@ -82,19 +85,21 @@
 </head>
 
 <body>
-    <header class="w-full h-[101px] bg-primaryBlue flex items-center justify-between text-white px-[250px]">
-        <div>
-            <img src="./img/logo.png" alt="">
-        </div>
-        <nav class="flex gap-5">
-            <a href="">Pricing</a>
-            <a href="">How it works</a>
-            <a href="">Design Samples</a>
-            <a href="">About</a>
-        </nav>
-        <div class="justify-self-end flex gap-x-5">
-            <button>Sign in</button>
-            <button class="border border-white rounded-md px-7 py-1">Start Today</button>
+    <header class=" bg-primaryBlue text-white">
+        <div class="w-[85%] mx-auto py-3 flex justify-between items-center">
+            <div>
+                <img src="./img/logo.png" alt="">
+            </div>
+            <nav class="flex gap-5">
+                <a href="">Pricing</a>
+                <a href="">How it works</a>
+                <a href="">Design Samples</a>
+                <a href="">About</a>
+            </nav>
+            <div class="justify-self-end flex gap-x-5">
+                <button>Sign in</button>
+                <button class="border border-white rounded-md px-7 py-1">Start Today</button>
+            </div>
         </div>
     </header>
 
@@ -118,7 +123,7 @@
     </main>
 
     <section id="designers_create" class="bg-designers h-full py-[100px]">
-        <div class="flex w-[60%] mx-auto">
+        <div class="flex justify-between w-[80%] mx-auto">
             <div class="w-[50%]">
                 <h2 class="text-primaryBlue font-bold text-2xl">OUR GRAPHIC DESIGNERS CREATE...</h2>
                 <p class="mt-5">Anything you can describe, we can create. <br>
@@ -209,68 +214,69 @@
     </section>
 
     <section id="designers_schedule" class=" bg-white py-[100px]">
+        <div class="w-[80%] mx-auto">
+            <div class="w-full mx-auto text-center flex flex-col gap-5">
+                <h2 class="text-primaryBlue font-bold text-2xl">SELECT YOUR DESIGNER'S SCHEDULE</h2>
+                <p>Only with Delesign can you select when your designer will be available at no added cost.</p>
 
-        <div class="w-[40%] mx-auto text-center flex flex-col gap-5">
-            <h2 class="text-primaryBlue font-bold text-2xl">SELECT YOUR DESIGNER'S SCHEDULE</h2>
-            <p>Only with Delesign can you select when your designer will be available at no added cost.</p>
-
-            <div id="schedules" class="flex text-white mx-auto">
-                <div id="schedule_day" class="w-[342px] h-[269px] flex items-center justify-center">
-                    <div class="flex flex-col">
-                        <h2 class="font-semibold text-2xl">DAY SCHEDULE</h2>
-                        <p>6:00 AM - 4:00 PM Pacific Time</p>
+                <div id="schedules" class="flex text-white mx-auto">
+                    <div id="schedule_day" class="w-[342px] h-[269px] flex items-center justify-center">
+                        <div class="flex flex-col">
+                            <h2 class="font-semibold text-2xl">DAY SCHEDULE</h2>
+                            <p>6:00 AM - 4:00 PM Pacific Time</p>
+                        </div>
+                    </div>
+                    <div id="schedule_night" class="w-[342px] h-[269px] flex items-center justify-center">
+                        <div class="flex flex-col">
+                            <h2 class="font-semibold text-2xl">NIGHT SCHEDULE</h2>
+                            <p>6:00 PM - 4:00 PM Pacific Time</p>
+                        </div>
                     </div>
                 </div>
-                <div id="schedule_night" class="w-[342px] h-[269px] flex items-center justify-center">
-                    <div class="flex flex-col">
-                        <h2 class="font-semibold text-2xl">NIGHT SCHEDULE</h2>
-                        <p>6:00 PM - 4:00 PM Pacific Time</p>
+
+                <button class="inline-flex mx-auto border border-accentGold text-accentGold px-10 py-1 rounded-md">Learn
+                    More</button>
+            </div>
+
+            <div class="w-full mx-auto text-center my-20">
+                <h2 class="text-2xl">We're Proud Of Our Service</h2>
+                <div class="flex items-center justify-center justify-between text-sm mt-10">
+                    <div class="flex flex-col items-center gap-3">
+                        <img class="h-[60px] object-contain" src="./img/logos/schedule/hq.png" alt="">
+                        <p>High Quality <br> Designs</p>
+                    </div>
+                    <div class="flex flex-col items-center gap-3">
+                        <img class="h-[60px] object-contain" src="./img/logos/schedule/dedicated.png" alt="">
+                        <p>Dedicated <br> Designer</p>
+                    </div>
+                    <div class="flex flex-col items-center gap-3">
+                        <img class="h-[60px] object-contain" src="./img/logos/schedule/unlimited.png" alt="">
+                        <p>Unlimited <br> Design Requests</p>
+                    </div>
+                    <div class="flex flex-col items-center gap-3">
+                        <img class="h-[60px] object-contain" src="./img/logos/schedule/cs.png" alt="">
+                        <p>24/7 Client <br> Support</p>
+                    </div>
+                    <div class="flex flex-col items-center gap-3">
+                        <img class="h-[60px] object-contain" src="./img/logos/schedule/unli.png" alt="">
+                        <p>Unlimited <br> Revisions</p>
+                    </div>
+                    <div class="flex flex-col items-center gap-3">
+                        <img class="h-[60px] object-contain" src="./img/logos/schedule/turnaround.png" alt="">
+                        <p>12 tp 24 Hours <br> Turnaround Time</p>
+                    </div>
+                    <div class="flex flex-col items-center gap-3">
+                        <img class="h-[60px] object-contain" src="./img/logos/schedule/access.png" alt="">
+                        <p>Access <br> To Source Files</p>
                     </div>
                 </div>
             </div>
-
-            <button class="inline-flex mx-auto border border-accentGold text-accentGold px-10 py-1 rounded-md">Learn
-                More</button>
         </div>
-
-        <div class="w-[80%] mx-auto text-center my-20">
-            <h2 class="text-2xl">We're Proud Of Our Service</h2>
-            <div class="flex items-center justify-center gap-20 text-sm mt-10">
-                <div class="flex flex-col items-center gap-3">
-                    <img class="h-[60px] object-contain" src="./img/logos/schedule/hq.png" alt="">
-                    <p>High Quality <br> Designs</p>
-                </div>
-                <div class="flex flex-col items-center gap-3">
-                    <img class="h-[60px] object-contain" src="./img/logos/schedule/dedicated.png" alt="">
-                    <p>Dedicated <br> Designer</p>
-                </div>
-                <div class="flex flex-col items-center gap-3">
-                    <img class="h-[60px] object-contain" src="./img/logos/schedule/unlimited.png" alt="">
-                    <p>Unlimited <br> Design Requests</p>
-                </div>
-                <div class="flex flex-col items-center gap-3">
-                    <img class="h-[60px] object-contain" src="./img/logos/schedule/cs.png" alt="">
-                    <p>24/7 Client <br> Support</p>
-                </div>
-                <div class="flex flex-col items-center gap-3">
-                    <img class="h-[60px] object-contain" src="./img/logos/schedule/unli.png" alt="">
-                    <p>Unlimited <br> Revisions</p>
-                </div>
-                <div class="flex flex-col items-center gap-3">
-                    <img class="h-[60px] object-contain" src="./img/logos/schedule/turnaround.png" alt="">
-                    <p>12 tp 24 Hours <br> Turnaround Time</p>
-                </div>
-                <div class="flex flex-col items-center gap-3">
-                    <img class="h-[60px] object-contain" src="./img/logos/schedule/access.png" alt="">
-                    <p>Access <br> To Source Files</p>
-                </div>
-            </div>
-        </div>
-
     </section>
 
     <section id="see_how_it_works" class="bg-designers h-full pb-[120px]">
-        <div class="flex w-[55%] mx-auto">
+
+        <div class="flex w-[70%] mx-auto">
             <div class="w-[50%] pt-10">
                 <h2 class="text-primaryBlue font-bold text-2xl">SEE HOW IT WORKS</h2>
                 <p class="mt-5">
@@ -287,9 +293,9 @@
     </section>
 
 
-    <section id="testimonials" class="bg-white pt-[100px]">
+    <section id="testimonials" class="bg-white pt-[100px] relative">
 
-        <div class="w-[60%] mx-auto text-center flex justify-between">
+        <div class="w-[70%] mx-auto text-center flex justify-between gap-5">
             <div class="flex flex-col py-5 px-6 border rounded-lg w-[294px] h-[455px]">
                 <img class="mx-auto" src="./img/testimonial_1.png" alt="">
                 <p class="grow mt-12 text-sm leading-6"> “Is that why you slapped my brother around in public? Fredo,
@@ -327,21 +333,14 @@
             <p class="mt-5">Try Delesign completely risk free. Use our service for 15 days, and if we're not a fit, you
                 will receive a <br> 100% full refund.</p>
         </div>
-        <div class="relative w-full flex flex-col items-center">
-            <button class="absolute bottom-[250px] bg-accentGold text-white rounded-lg z-10 text-3xl px-8 py-2">START
-                TODAY</button>
-            <img class="absolute bottom-[-210px]" id="testimonial_octopus" src="./img/testimonial_octopus.png" alt="">
-            <div class="absolute left-0 bottom-0 right-0"> <img class="w-full" src="./img/testimonial_bg2.png" alt="">
-            </div>
-            <div class="absolute left-0 bottom-0 right-0"> <img class="w-full" src="./img/testimonial_bg1.png" alt="">
-            </div>
+        <div></div>
 
-        </div>
+      
     </section>
 
 
 
-    <footer class="bg-primaryBlue z-10 flex py-[100px] text-white">
+    <footer class="bg-primaryBlue z-10 flex py-10 text-white">
         <div class="w-[70%] mx-auto">
             <div class="flex w-full items-center gap-10">
                 <img class="" src="./img/logo.png" alt="">
